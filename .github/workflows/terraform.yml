@@ -89,7 +89,7 @@ jobs:
 
 
     - name: Terraform Workspace Branch
-      run: terraform workspace select "$BRANCH_NAME" -or-create=false
+      run: terraform workspace select $BRANCH_NAME -or-create=false
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
