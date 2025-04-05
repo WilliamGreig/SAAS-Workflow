@@ -80,16 +80,8 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    # Checks that all Terraform configuration files adhere to a canonical format
-    # - name: Terraform Format
-    #   run: terraform fmt -check
-    
-    - name: Echo Workspace
-      run: echo $BRANCH_NAME
-
-
-    - name: Terraform Workspace Branch
-      run: terraform workspace select $BRANCH_NAME -or-create=false
+    # - name: Terraform Workspace Branch
+    #   run: terraform workspace select default
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
